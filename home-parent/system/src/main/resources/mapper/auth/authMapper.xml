@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.boot.home.user.dao.UserMapper">
+<mapper namespace="cn.boot.home.auth.dao.AuthMapper">
 
-	<resultMap type="cn.boot.home.user.pojo.UserEntity" id="userResultMap">
-		<id column="user_id" jdbcType="VARCHAR" property="user_id" />
-		<result column="user_name" jdbcType="VARCHAR" property="user_name" />
-		<result column="user_sex" jdbcType="VARCHAR" property="user_sex" />
-		<result column="user_tel" jdbcType="VARCHAR" property="user_tel" />
-		<result column="user_password" jdbcType="VARCHAR" property="user_password" />
-		<result column="user_address" jdbcType="VARCHAR" property="user_address" />
+	<resultMap type="cn.boot.home.auth.pojo.AuthEntity" id="authResultMap">
+		<id column="auth_id" jdbcType="VARCHAR" property="auth_id" />
+		<result column="auth_name" jdbcType="VARCHAR" property="auth_name" />
+		<result column="auth_type" jdbcType="VARCHAR" property="auth_type" />
+		<result column="auth_url" jdbcType="VARCHAR" property="auth_url" />
+		<result column="parent_auth_id" jdbcType="VARCHAR" property="parent_auth_id" />
+		<result column="show_flag" jdbcType="VARCHAR" property="show_flag" />
 	</resultMap>
 
-	<select id="getUserList" resultMap="userResultMap">
-		select * from user
+	<select id="getAuthList" resultMap="authResultMap">
+		select * from sys_home_auth
 	</select>
 
 

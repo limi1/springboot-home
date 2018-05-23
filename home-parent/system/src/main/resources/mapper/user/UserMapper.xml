@@ -10,10 +10,16 @@
 		<result column="user_tel" jdbcType="VARCHAR" property="user_tel" />
 		<result column="user_password" jdbcType="VARCHAR" property="user_password" />
 		<result column="user_address" jdbcType="VARCHAR" property="user_address" />
+		<result column="organi_id" jdbcType="VARCHAR" property="organi_id" />
+		<result column="user_lock" jdbcType="VARCHAR" property="user_lock" />
+		<result column="found_date" jdbcType="VARCHAR" property="found_date" />
+		<result column="found_time" jdbcType="VARCHAR" property="found_time" />
+		<result column="login_date" jdbcType="VARCHAR" property="login_date" />
+		<result column="login_ip" jdbcType="VARCHAR" property="login_ip" />
 	</resultMap>
 
 	<select id="getUserList" resultMap="userResultMap">
-		select * from user
+		select * from sys_home_user
 	</select>
 
 

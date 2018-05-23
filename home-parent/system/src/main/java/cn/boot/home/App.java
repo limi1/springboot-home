@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = "cn.boot.home")
 @ServletComponentScan // 过滤器注解
 // @EnableCaching// 缓存注解
-@MapperScan("cn.boot.home.*.dao") // 扫描dao
+// @MapperScan("cn.boot.home.*.dao") // 扫描dao
 public class App {
 
 	public static void main(String[] args) {

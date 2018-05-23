@@ -1,5 +1,8 @@
 package cn.boot.home.auth.pojo;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion;
+
 /**
  * 菜单实体类
  * 
@@ -8,11 +11,28 @@ package cn.boot.home.auth.pojo;
  */
 public class AuthEntity {
 
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_id;
+	
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_type;
+	
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_url;
+	
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_name;
+	
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String parent_auth_id;
+	
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String show_flag;
 
 	protected String getAuth_id() {

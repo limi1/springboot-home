@@ -2,6 +2,9 @@ package cn.boot.home.role.pojo;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion;
+
 /**
  * 角色实体类
  * 
@@ -15,11 +18,28 @@ public class RoleEntity implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String role_id;
+	
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String role_name;
+	
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String role_desc;
+	
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String role_lock;
+	
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String found_date;
+	
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String found_time;
 
 	protected String getRole_id() {

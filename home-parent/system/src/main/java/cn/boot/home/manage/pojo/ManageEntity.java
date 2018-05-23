@@ -1,5 +1,8 @@
 package cn.boot.home.manage.pojo;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion;
+
 /**
  * 权限实体类
  * 
@@ -8,48 +11,78 @@ package cn.boot.home.manage.pojo;
  */
 public class ManageEntity {
 
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String manage_id;
+
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String manage_name;
+
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String manage_desc;
+
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String manage_lock;
+
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String found_date;
+
+	@SuppressWarnings("deprecation")
+	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String found_time;
+
 	protected String getManage_id() {
 		return manage_id;
 	}
+
 	protected void setManage_id(String manage_id) {
 		this.manage_id = manage_id;
 	}
+
 	protected String getManage_name() {
 		return manage_name;
 	}
+
 	protected void setManage_name(String manage_name) {
 		this.manage_name = manage_name;
 	}
+
 	protected String getManage_desc() {
 		return manage_desc;
 	}
+
 	protected void setManage_desc(String manage_desc) {
 		this.manage_desc = manage_desc;
 	}
+
 	protected String getManage_lock() {
 		return manage_lock;
 	}
+
 	protected void setManage_lock(String manage_lock) {
 		this.manage_lock = manage_lock;
 	}
+
 	protected String getFound_date() {
 		return found_date;
 	}
+
 	protected void setFound_date(String found_date) {
 		this.found_date = found_date;
 	}
+
 	protected String getFound_time() {
 		return found_time;
 	}
+
 	protected void setFound_time(String found_time) {
 		this.found_time = found_time;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -62,6 +95,7 @@ public class ManageEntity {
 		result = prime * result + ((manage_name == null) ? 0 : manage_name.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -103,11 +137,11 @@ public class ManageEntity {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "ManageEntity [manage_id=" + manage_id + ", manage_name=" + manage_name + ", manage_desc=" + manage_desc
 				+ ", manage_lock=" + manage_lock + ", found_date=" + found_date + ", found_time=" + found_time + "]";
 	}
-	
-	
+
 }

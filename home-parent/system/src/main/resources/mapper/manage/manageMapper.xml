@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.boot.home.user.dao.UserMapper">
+<mapper namespace="cn.boot.home.manage.dao.ManageMapper">
 
-	<resultMap type="cn.boot.home.user.pojo.UserEntity" id="userResultMap">
-		<id column="user_id" jdbcType="VARCHAR" property="user_id" />
-		<result column="user_name" jdbcType="VARCHAR" property="user_name" />
-		<result column="user_sex" jdbcType="VARCHAR" property="user_sex" />
-		<result column="user_tel" jdbcType="VARCHAR" property="user_tel" />
-		<result column="user_password" jdbcType="VARCHAR" property="user_password" />
-		<result column="user_address" jdbcType="VARCHAR" property="user_address" />
+	<resultMap type="cn.boot.home.manage.pojo.ManageEntity" id="manageResultMap">
+		<id column="manage_id" jdbcType="VARCHAR" property="manage_id" />
+		<result column="manage_name" jdbcType="VARCHAR" property="manage_name" />
+		<result column="manage_desc" jdbcType="VARCHAR" property="manage_desc" />
+		<result column="manage_lock" jdbcType="VARCHAR" property="manage_lock" />
+		<result column="found_date" jdbcType="VARCHAR" property="found_date" />
+		<result column="found_time" jdbcType="VARCHAR" property="found_time" />
 	</resultMap>
 
-	<select id="getUserList" resultMap="userResultMap">
-		select * from user
+	<select id="getManageList" resultMap="manageResultMap">
+		select * from sys_home_manage
 	</select>
 
 
