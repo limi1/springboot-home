@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-Title: system ￥ﾟﾺ￧ﾡﾀ￦ﾨﾡ￥ﾝﾗ
+Implementation-Version: 1.0.0-SNAPSHOT
+Implementation-Vendor-Id: cn.boot.home
+Build-Jdk: 1.7.0_75
+Built-By: limi
+Created-By: Maven Integration for Eclipse
+Implementation-URL: http://projects.spring.io/spring-boot/home-parent/
+ system/
+
