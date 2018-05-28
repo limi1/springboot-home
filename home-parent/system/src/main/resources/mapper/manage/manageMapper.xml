@@ -11,6 +11,10 @@
 		<result column="found_date" jdbcType="VARCHAR" property="found_date" />
 		<result column="found_time" jdbcType="VARCHAR" property="found_time" />
 	</resultMap>
+	
+	<sql id="Base_Column_List">
+	manage_id,manage_name,manage_desc,manage_lock,found_date,found_time
+	</sql>
 
 	<select id="getManageList" resultMap="manageResultMap">
 		select * from sys_home_manage
