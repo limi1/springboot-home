@@ -6,10 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion;
 
@@ -19,37 +15,51 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion;
  * @author limi
  *
  */
-// @Entity
-// @Table(name = "sys_home_auth")
+@Entity
+@Table(name = "sys_home_auth")
 public class AuthEntity {
 
-	// @Id
-	// @GeneratedValue
+	public AuthEntity() {
+	}
+
+	public AuthEntity(String auth_id, String auth_type, String auth_url, String auth_name, String parent_auth_id,
+			String show_flag) {
+		super();
+		this.auth_id = auth_id;
+		this.auth_type = auth_type;
+		this.auth_url = auth_url;
+		this.auth_name = auth_name;
+		this.parent_auth_id = parent_auth_id;
+		this.show_flag = show_flag;
+	}
+
+	@Id
+	@GeneratedValue
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_id;
 
-	// @Column
+	@Column(nullable = false)
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_type;
 
-	// @Column
+	@Column(nullable = false)
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_url;
 
-	// @Column
+	@Column(nullable = false)
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_name;
 
-	// @Column
+	@Column(nullable = false)
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String parent_auth_id;
 
-	// @Column
+	@Column(nullable = false)
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String show_flag;

@@ -20,4 +20,5 @@ public class ManageController {
 	public List<ManageEntity> getManageList(){
 		return manageSerivce.getManageList();
 	}
+	
 }

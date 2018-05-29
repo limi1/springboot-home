@@ -1,11 +1,5 @@
 package cn.boot.home.manage.pojo;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion;
 
@@ -19,33 +13,33 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize.Inclusion;
 //@Table(name = "sys_home_manage")
 public class ManageEntity {
 
-	@Id
-    @GeneratedValue
+//	@Id
+//    @GeneratedValue
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String manage_id;
 
-	@Column
+//	@Column
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String manage_name;
 
-	@Column
+//	@Column
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String manage_desc;
 
-	@Column
+//	@Column
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String manage_lock;
 
-	@Column
+//	@Column
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String found_date;
 
-	@Column
+//	@Column
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String found_time;

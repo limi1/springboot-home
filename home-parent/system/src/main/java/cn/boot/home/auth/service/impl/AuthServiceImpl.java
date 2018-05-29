@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import cn.boot.home.auth.dao.AuthMapper;
+import cn.boot.home.auth.dao.repository.AuthRepository;
 import cn.boot.home.auth.pojo.AuthEntity;
 import cn.boot.home.auth.service.AuthService;
 
@@ -15,11 +15,12 @@ import cn.boot.home.auth.service.AuthService;
 public class AuthServiceImpl implements AuthService {
 
 	@Autowired
-	private AuthMapper authMapperImpl;
+	private AuthRepository authRepository;
+//	private AuthMapper authMapperImpl;
 	
 	@Override
 	public List<AuthEntity> getAuthList() {
-		return authMapperImpl.getAuthList();
+		return authRepository.findAll();
 	}
 
 }
