@@ -1,0 +1,15 @@
+
+spring boot 父子项目格局
+
+home-parent为项目的父项目，
+子模块名称一般为6位字母，sys开头的子项目为系统主要构成模块，其他子项目为需求开发模块。
+
+基础框架为spring boot
+后台整合：tomcat、jsp、hibernate、mybatis、activity
+尚未整合：Shiro、Quartz
+前端框架：MATERIAL（国外）、zui(国内)
+
+system:开发用户权限，自己写权限或者整合apache公司下的Shiro安全框架
+sysbpm:模块为activity流程引擎模块，用于开发流程。
+sysqrz:批量任务模块，整合Quartz批量框架
+waremo:业务开发模块，测试时开发的
