@@ -39,27 +39,27 @@ public class AuthEntity {
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_id;
 
-	@Column(nullable = false)
+	@Column(name="auth_type",nullable = false, length = 20)
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_type;
 
-	@Column(nullable = false)
+	@Column(name="auth_url",nullable = false, length = 20)
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_url;
 
-	@Column(nullable = false)
+	@Column(name="auth_name",nullable = false, length = 20)
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String auth_name;
 
-	@Column(nullable = false)
+	@Column(name="parent_auth_id",nullable = false, length = 20)
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String parent_auth_id;
 
-	@Column(nullable = false)
+	@Column(name="show_flag",nullable = false, length = 20)
 	@SuppressWarnings("deprecation")
 	@JsonSerialize(include = Inclusion.ALWAYS)
 	private String show_flag;

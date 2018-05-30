@@ -1,11 +1,16 @@
 package cn.boot.home;
 
+import org.hibernate.Session;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ComponentScan;
-
+/**
+ * spring boot核心启动器
+ * @author limi
+ *
+ */
 @SpringBootApplication(scanBasePackages = "cn.boot.home.*")
 @ComponentScan(basePackages = "cn.boot.home") // 扫描指定包内的注解；
 @ServletComponentScan // 过滤器注解
@@ -15,6 +20,8 @@ public class App {
 
 	public static void main(String[] args) {
 		SpringApplication.run(App.class, args);
+//		Session session=HibernateSessionFactory.getSession();
+//		HibernateSessionFactory
 	}
 
 }
